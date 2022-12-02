@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { Color, H1 } from "./ui";
+import { Typography } from "./ui/typography";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <StyledApp>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+        nesciunt voluptatibus dolor dolores doloribus soluta expedita rerum
+        voluptatem, iste vero eveniet ad esse, animi tenetur deserunt architecto
+        obcaecati at velit! Ut esse quasi inventore neque, fugiat velit fugit
+        quas nam earum beatae saepe ea dolor, omnis magnam, modi id nobis?
+      </StyledApp>
     </div>
   );
-}
+};
 
-export default App;
+const StyledApp = styled.h1`
+  ${Typography.H1}
+`;
