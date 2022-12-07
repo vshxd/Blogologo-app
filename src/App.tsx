@@ -1,21 +1,12 @@
 import { useEffect, useState } from "react";
-import { Title, Wrapper } from "./styles";
-
-type Theme = "dark" | "light";
+import { Footer, Header } from "./components";
+import { Wrapper } from "./styles";
 
 export const App = () => {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const handleTheme = () => {
-    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
-  };
-  useEffect(() => {
-    document.documentElement.setAttribute("theme", theme);
-  }, [theme]);
-
   return (
     <Wrapper>
-      <Title>Blog</Title>
-      <button onClick={handleTheme}>Change Theme</button>
+      <Header />
+      <Footer />
     </Wrapper>
   );
 };
