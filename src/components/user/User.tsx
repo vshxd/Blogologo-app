@@ -1,6 +1,5 @@
-import React from "react";
 import UserIcon from "../../assets/img/header/HeaderUserIcon.png";
-import { ImageText, StyledUserProfile, UserImage } from "..";
+import { ImageText, StyledUserProfile, UserImage } from "./styles";
 
 export const User = () => {
   return (

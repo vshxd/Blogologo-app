@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, StyledFooter, TextFooter, ThemeButton } from "./styles";
+import { StyledFooter, TextFooter, ThemeButton } from "./styles";
 
 type Theme = "dark" | "light";
 export const Footer = () => {
@@ -11,11 +11,9 @@ export const Footer = () => {
     document.documentElement.setAttribute("theme", theme);
   }, [theme]);
   return (
-    <Container>
-      <StyledFooter>
-        <TextFooter>©2022 Blogolog</TextFooter>
-        <ThemeButton onClick={handleTheme}>Theme</ThemeButton>
-      </StyledFooter>
-    </Container>
+    <StyledFooter>
+      <TextFooter>©2022 Blogologo</TextFooter>
+      <ThemeButton onClick={handleTheme}>Theme</ThemeButton>
+    </StyledFooter>
   );
 };
