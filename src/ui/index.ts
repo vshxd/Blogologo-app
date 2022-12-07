@@ -1,4 +1,20 @@
 import { Color } from "./colors";
-import { H1 } from "./typography";
+import { Media } from "./media";
+import { resetCSS } from "./resetCSS";
+import { lightTheme, darkTheme } from "./theme";
+import { H1, H2, H3, B1, S1 } from "./typography";
+import { GlobalStyles } from "./globalStyles";
 
-export { Color, H1 };
+export {
+  Color,
+  Media,
+  resetCSS,
+  lightTheme,
+  darkTheme,
+  H1,
+  H2,
+  H3,
+  B1,
+  S1,
+  GlobalStyles,
+};

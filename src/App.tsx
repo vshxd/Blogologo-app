@@ -1,21 +1,21 @@
-import styled from "styled-components";
-import { Color, H1 } from "./ui";
-import { Typography } from "./ui/typography";
+import { useEffect, useState } from "react";
+import { Title, Wrapper } from "./styles";
+
+type Theme = "dark" | "light";
 
 export const App = () => {
+  const [theme, setTheme] = useState<Theme>("dark");
+  const handleTheme = () => {
+    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
+  };
+  useEffect(() => {
+    document.documentElement.setAttribute("theme", theme);
+  }, [theme]);
+
   return (
-    <div>
-      <StyledApp>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        nesciunt voluptatibus dolor dolores doloribus soluta expedita rerum
-        voluptatem, iste vero eveniet ad esse, animi tenetur deserunt architecto
-        obcaecati at velit! Ut esse quasi inventore neque, fugiat velit fugit
-        quas nam earum beatae saepe ea dolor, omnis magnam, modi id nobis?
-      </StyledApp>
-    </div>
+    <Wrapper>
+      <Title>Blog</Title>
+      <button onClick={handleTheme}>Change Theme</button>
+    </Wrapper>
   );
 };
-
-const StyledApp = styled.h1`
-  ${Typography.H1}
-`;

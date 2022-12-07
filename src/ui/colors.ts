@@ -1,5 +1,6 @@
 export enum Color {
-  Primary = "#6C1BDB",
+  Primary = "var(--primary)",
+  Primary_BG = "var(--primary-bg)",
   Primary_Light = "#912EF2",
   Secondary = "#313037",
   Medium = "rgba(49, 48, 55, 0.5)",
