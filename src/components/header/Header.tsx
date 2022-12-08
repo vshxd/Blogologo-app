@@ -1,5 +1,5 @@
 import { Search, User } from "..";
-import { ReactComponent as LogoIcon } from "../../assets/img/header/HeaderLogo.svg";
+import { ReactComponent as LogoIcon } from "../../assets/img/headerLogo.svg";
 import { StyledHeader } from "./styles";
 
 export const Header = () => {

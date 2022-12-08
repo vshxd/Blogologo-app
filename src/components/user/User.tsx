@@ -1,4 +1,4 @@
-import UserIcon from "../../assets/img/header/HeaderUserIcon.png";
+import UserIcon from "../../assets/img/headerUserIcon.png";
 import { ImageText, StyledUserProfile, UserImage } from "./styles";
 
 // interface IUser {

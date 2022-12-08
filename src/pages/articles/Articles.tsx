@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { newsAPI } from "../../services";
+import { IBlog } from "../../types";
 
 export const Articles = () => {
-  const [news, setNews] = useState<any[]>([]);
+  const [news, setNews] = useState<IBlog[]>([]);
   useEffect(() => {
     newsAPI.getAll().then(setNews);
   }, []);

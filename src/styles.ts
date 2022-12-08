@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, Media } from "./ui";
+import { Color, Media, Typography } from "./ui";
 
 export const Wrapper = styled.div`
   background: ${Color.Primary_BG};
@@ -16,4 +16,8 @@ export const Container = styled.div`
   ${Media.SM} {
     width: 520px;
   }
+`;
+
+export const Text = styled.p`
+  ${Typography.H2}
 `;

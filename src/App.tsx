@@ -1,5 +1,4 @@
 import { Footer, Header } from "./components";
-import { AppRouter } from "./components/AppRouter/Route";
 import { Container, Wrapper } from "./styles";
 
 export const App = () => {
@@ -7,7 +6,6 @@ export const App = () => {
     <Wrapper>
       <Header />
       <Container>
-        <AppRouter />
         <Footer />
       </Container>
     </Wrapper>
