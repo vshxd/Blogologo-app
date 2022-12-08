@@ -1,6 +1,6 @@
-import { Header } from "./header/Header";
-import { Search } from "./search/Search";
-import { User } from "./user/User";
-import { Footer } from "./footer/Footer";
+import { Header } from "./Header/Header";
+import { Search } from "./Search/Search";
+import { User } from "./User/User";
+import { Footer } from "./Footer/Footer";
 
 export { Header, Search, User, Footer };

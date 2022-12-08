@@ -1,11 +1,13 @@
-import React from "react";
-import { Articles, News } from "..";
+import { NavLink } from "react-router-dom";
 
 export const Blog = () => {
   return (
-    <>
-      <Articles />
-      <News />;
-    </>
+    <div>
+      Blog
+      <nav>
+        <NavLink to="/articles">Articles</NavLink>
+        <NavLink to="/news">News</NavLink>
+      </nav>
+    </div>
   );
 };
