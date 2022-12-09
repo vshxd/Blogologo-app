@@ -17,7 +17,3 @@ export const Container = styled.div`
     width: 520px;
   }
 `;
-
-export const Text = styled.p`
-  ${Typography.H2}
-`;

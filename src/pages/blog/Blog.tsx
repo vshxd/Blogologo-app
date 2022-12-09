@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Articles, News } from "..";
+import { StyledBlog } from "./styles";
 
 export const Blog = () => {
   return (
-    <div>
-      Blog
-      <nav>
-        <NavLink to="/articles">Articles</NavLink>
-        <NavLink to="/news">News</NavLink>
-      </nav>
-    </div>
+    <>
+      <StyledBlog>Blog</StyledBlog>
+      <Articles />
+      <News />
+    </>
   );
 };

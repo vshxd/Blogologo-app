@@ -3,4 +3,6 @@ export interface IBlog {
   title: string;
   url: string;
   imageUrl: string;
+  publishedAt: string;
+  newSite: string;
 }
