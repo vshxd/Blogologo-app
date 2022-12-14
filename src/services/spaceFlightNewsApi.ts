@@ -12,9 +12,9 @@ class NewsApi {
     baseURL: this.BASE_URL,
   });
 
-  public async getArticles() {
+  public async getArticles(options: number) {
     const params = {
-      _limit: 12,
+      _limit: options,
     };
     const { data } = await this.API.get<IBlog[]>(this.ENDPOINT.articles, { params });
 

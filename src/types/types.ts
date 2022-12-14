@@ -1,5 +1,3 @@
-import { store } from "../store";
-
 export interface IBlog {
   id: number;
   title: string;
@@ -8,5 +6,3 @@ export interface IBlog {
   publishedAt: string;
   newSite: string;
 }
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
