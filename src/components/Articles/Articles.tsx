@@ -14,7 +14,7 @@ import {
 export const Articles = () => {
   const [articles, setArticles] = useState<IBlog[]>([]);
   useEffect(() => {
-    newsAPI.getArticles().then(setArticles);
+    newsAPI.getArticles(12).then(setArticles);
   }, []);
   return (
     <StyledArticles>

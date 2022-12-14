@@ -1,13 +1,23 @@
-import styled from "styled-components";
-import { ReactComponent as SearchIcon } from "../../assets/img/headerSearch.svg";
+import { useEffect } from "react";
+import { useToggle } from "../../hooks";
 import { Color } from "../../ui";
-
-export const StyledSearchIcon = styled(SearchIcon)`
-  & path {
-    stroke: ${({ color }) => color || "white"};
-  }
-`;
+import { StyledSearchIcon } from "./styles";
 
 export const Search = () => {
-  return <StyledSearchIcon color={Color.Primary} />;
+  const [isSearchActive, toggleSearchActive] = useToggle(true);
+  const handleSearch = () => {
+    toggleSearchActive();
+  };
+  useEffect(() => {
+    handleSearch();
+  }, []);
+  return (
+    <>
+      {isSearchActive ? (
+        <input />
+      ) : (
+        <StyledSearchIcon color={Color.Primary} onClick={handleSearch} />
+      )}
+    </>
+  );
 };

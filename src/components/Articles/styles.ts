@@ -2,14 +2,13 @@ import styled from "styled-components";
 import { Color, Typography } from "../../ui";
 
 export const StyledArticles = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 50px;
 `;
 
-export const NewsElements = styled.li`
-  list-style: none;
-  width: 33.3333%;
-`;
+export const NewsElements = styled.li``;
 
 export const Figure = styled.figure`
   display: flex;
@@ -18,10 +17,11 @@ export const Figure = styled.figure`
 
 export const Image = styled.img`
   width: 100%;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  background-color: ${Color.Primary_Light};
 `;
 
 export const FigCaption = styled.figcaption`
@@ -29,7 +29,7 @@ export const FigCaption = styled.figcaption`
   padding: 30px 20px 30px 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 50%;
+  height: 130px;
 `;
 
 export const FigureDisc = styled.p`

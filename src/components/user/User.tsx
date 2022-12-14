@@ -1,5 +1,4 @@
-import UserIcon from "../../assets/img/headerUserIcon.png";
-import UserUnLoginIcon from "../../assets/img/headerUserUnLoginIcon.png";
+import { UserIcon, UserLogoutIcon } from "../../assets";
 import { getUser, toggleAuth, useAppDispatch, useAppSelector } from "../../store";
 import { ImageText, StyledUserProfile, Image, Info, Name, Btn } from "./styles";
 
@@ -24,7 +23,7 @@ export const User = () => {
       ) : (
         <Info>
           <Image>
-            <img src={UserUnLoginIcon} alt="user-icon" />
+            <img src={UserLogoutIcon} alt="user-icon" />
           </Image>
           <Btn onClick={handleAuth}>Sign In</Btn>
         </Info>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, Media } from "../../ui";
+import { Color } from "../../ui";
 
 export const StyledFooter = styled.footer`
   display: flex;
@@ -11,7 +11,7 @@ export const TextFooter = styled.p`
   font-size: 16px;
   color: ${Color.Primary};
 `;
-export const ThemeButton = styled.button`
+export const Button = styled.button`
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.5);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { StyledFooter, TextFooter, ThemeButton } from "./styles";
+
+import { StyledFooter, TextFooter, Button } from "./styles";
 
 type Theme = "dark" | "light";
 export const Footer = () => {
@@ -13,7 +14,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <TextFooter>©2022 Blogologo</TextFooter>
-      <ThemeButton onClick={handleTheme}>Theme</ThemeButton>
+      <Button onClick={handleTheme}>Theme</Button>
     </StyledFooter>
   );
 };

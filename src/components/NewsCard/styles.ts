@@ -1,15 +1,7 @@
 import styled from "styled-components";
 import { Color, Typography } from "../../ui";
 
-export const StyledNews = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-export const NewsElements = styled.li`
-  list-style: none;
-  width: 33.3333%;
-`;
+export const NewsElements = styled.li``;
 
 export const Figure = styled.figure`
   display: flex;
@@ -18,7 +10,7 @@ export const Figure = styled.figure`
 
 export const Image = styled.img`
   width: 100%;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -29,7 +21,7 @@ export const FigCaption = styled.figcaption`
   padding: 30px 20px 30px 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 50%;
+  height: 130px;
 `;
 
 export const FigureDisc = styled.p`
@@ -44,4 +36,7 @@ export const FigureDate = styled.p`
   ${Typography.B2}
   color: #828687;
   margin-bottom: 10px;
+`;
+export const Background = styled.div`
+  background: ${Color.Primary_Light};
 `;
