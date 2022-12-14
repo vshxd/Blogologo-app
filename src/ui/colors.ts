@@ -5,7 +5,7 @@ export enum Color {
   Secondary = "var(--secondary)",
   Secondary_Light = "#6C1BDB",
   Secondary_Button = "var(--secondary-btn)",
-  Medium = "rgba(49, 48, 55, 0.5)",
+  Border = "var(--border)",
   Light = "rgba(49, 48, 55, 0.3)",
   Extra_Light = "rgba(49, 48, 55, 0.1)",
   Error = "#FD3419",

@@ -5,5 +5,6 @@ import { Footer } from "./Footer/Footer";
 import { Articles } from "./Articles/Articles";
 import { Blog } from "./Blog/Blog";
 import { News } from "./News/News";
+import { Toggle } from "./Toggle/Toggle";
 
-export { Header, Search, User, Footer, Articles, Blog, News };
+export { Header, Search, User, Footer, Articles, Blog, News, Toggle };

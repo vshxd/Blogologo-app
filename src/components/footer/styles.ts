@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { Color } from "../../ui";
 
 export const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 0.05fr;
   align-items: center;
+  border-top: 1px solid ${Color.Border};
+  padding: 25px 0 25px 0;
+  margin-top: 50px;
 `;
 export const TextFooter = styled.p`
   font-weight: 400;

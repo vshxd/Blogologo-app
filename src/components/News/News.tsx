@@ -20,7 +20,7 @@ export const News = () => {
 
       <StyledNews>
         {isLoading ? <span>Loading...</span> : <NewsCard articles={results} />}
-        {error && <span>{error}</span>};
+        {error && <span>{error}</span>}
       </StyledNews>
     </>
   );
