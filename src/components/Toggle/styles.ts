@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, Typography } from "../../ui";
+import { Color, Typography } from "ui";
 
 export const InputWrapper = styled.label`
   position: relative;
@@ -17,9 +17,6 @@ export const Input = styled.input`
   }
   &:focus + span {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-  }
-  &:focus:checked + span {
-    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
   }
 `;
 

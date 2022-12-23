@@ -6,3 +6,8 @@ export interface IBlog {
   publishedAt: string;
   newSite: string;
 }
+export interface ITab {
+  id: string | number;
+  label: string | number;
+  isActive: boolean;
+}

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useToggle } from "../../hooks";
-import { Color } from "../../ui";
+import { useToggle } from "hooks";
+import { Color } from "ui";
 import { StyledSearchIcon } from "./styles";
 
 export const Search = () => {

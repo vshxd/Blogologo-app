@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { newsAPI } from "../../services";
-import { IBlog } from "../../types";
+import { newsAPI } from "services";
+import { IBlog } from "types";
 import {
   NewsElements,
   StyledArticles,
@@ -21,7 +21,7 @@ export const Articles = () => {
       {articles.map((n) => (
         <NewsElements key={n.id}>
           <Figure>
-            <Image src={n.imageUrl} alt={n.newSite} />
+            <Image src={n.imageUrl} alt={n.title} />
             <FigCaption>
               <FigureDate>{n.publishedAt}</FigureDate>
               <FigureDisc>{n.title}</FigureDisc>

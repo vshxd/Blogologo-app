@@ -1,5 +1,5 @@
-import { Blog, Footer, Header } from "./components";
-import { Container, Wrapper } from "./styles";
+import { Blog, Footer, Header } from "components";
+import { Container, Wrapper } from "styles";
 
 export const App = () => {
   return (

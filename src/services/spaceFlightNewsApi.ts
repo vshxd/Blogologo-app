@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IBlog } from "../types";
+import { IBlog } from "types";
 class NewsApi {
   private readonly BASE_URL = "https://api.spaceflightnewsapi.net/v3/";
   private readonly ENDPOINT = {

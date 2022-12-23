@@ -1,6 +1,7 @@
+import { NewsCard } from "components";
 import { useEffect } from "react";
-import { fetchAllNews, getAllNews, useAppDispatch, useAppSelector } from "../../store";
-import { NewsCard } from "../NewsCard/NewsCard";
+import { fetchAllNews, getAllNews, useAppDispatch, useAppSelector } from "store";
+
 import { SortButton, SortButtonActive, SortMenu, StyledNews } from "./styles";
 
 export const News = () => {

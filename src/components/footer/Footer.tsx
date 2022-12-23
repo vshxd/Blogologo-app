@@ -1,13 +1,12 @@
+import { Toggle } from "components";
 import { useEffect, useState } from "react";
-import { Toggle } from "..";
-
 import { StyledFooter, TextFooter } from "./styles";
 
 type Theme = "dark" | "light";
 export const Footer = () => {
   const [theme, setTheme] = useState<Theme>("light");
   const handleTheme = () => {
-    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
@@ -16,7 +15,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <TextFooter>©2022 Blogologo</TextFooter>
-      <Toggle onChange={handleTheme} />
+      <Toggle onChange={handleTheme} /> 
     </StyledFooter>
   );
 };

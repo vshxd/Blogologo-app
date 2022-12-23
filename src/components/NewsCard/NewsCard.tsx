@@ -1,13 +1,5 @@
-import { IBlog } from "../../types";
-import {
-  FigCaption,
-  Figure,
-  FigureDate,
-  FigureDisc,
-  NewsElements,
-  Image,
-  Background,
-} from "./styles";
+import { IBlog } from "types";
+import { FigCaption, Figure, FigureDate, FigureDisc, NewsElements, Image } from "./styles";
 
 interface IProps {
   articles: IBlog[];
@@ -20,10 +12,7 @@ export const NewsCard = ({ articles }: IProps) => {
         return (
           <NewsElements key={item.id}>
             <Figure>
-              <Background>
-                <Image src={item.imageUrl} alt={item.newSite} />
-              </Background>
-
+              <Image src={item.imageUrl} alt={item.title} />
               <FigCaption>
                 <FigureDate>{new Date(item.publishedAt).toLocaleDateString()}</FigureDate>
                 <FigureDisc>

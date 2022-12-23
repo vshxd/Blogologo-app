@@ -1,7 +1,14 @@
 import styled from "styled-components";
-import { Color, Typography } from "../../ui";
+import { Color, Typography } from "ui";
 
-export const NewsElements = styled.li``;
+export const NewsElements = styled.li`
+  transition: all 0.2s ease-in-out;
+  background-color: ${Color.Primary_BG};
+  border-radius: 20px;
+  &:hover {
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%), 0 0px 20px rgb(0 0 0 / 15%);
+  }
+`;
 
 export const Figure = styled.figure`
   display: flex;
@@ -14,6 +21,11 @@ export const Image = styled.img`
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  filter: brightness(0.6);
+  transition: filter 0.2s ease-in-out;
+  &:hover {
+    filter: brightness(1);
+  }
 `;
 
 export const FigCaption = styled.figcaption`
@@ -36,7 +48,4 @@ export const FigureDate = styled.p`
   ${Typography.B2}
   color: #828687;
   margin-bottom: 10px;
-`;
-export const Background = styled.div`
-  background: ${Color.Primary_Light};
 `;
