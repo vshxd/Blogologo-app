@@ -7,7 +7,6 @@ export interface IBlog {
   newSite: string;
 }
 export interface ITab {
-  id: string | number;
-  label: string | number;
-  isActive: boolean;
+  id: string;
+  label: string;
 }
