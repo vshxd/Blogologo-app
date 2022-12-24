@@ -6,8 +6,8 @@ export const InputWrapper = styled.label`
 `;
 export const Input = styled.input`
   position: absolute;
-  left: -9999px;
-  top: -9999px;
+  left: 10px;
+  top: 10px;
   &:checked + span {
     background-color: ${Color.Secondary_Light};
     &:before {

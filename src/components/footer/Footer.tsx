@@ -15,7 +15,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <TextFooter>©2022 Blogologo</TextFooter>
-      <Toggle onChange={handleTheme} /> 
+      <Toggle onChange={handleTheme} />
     </StyledFooter>
   );
 };
