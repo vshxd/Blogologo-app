@@ -1,14 +1,14 @@
-import { IBlog } from "types";
+import { INews } from "types";
 import { FigCaption, Figure, FigureDate, FigureDisc, NewsElements, Image } from "./styles";
 
 interface IProps {
-  articles: IBlog[];
+  news: INews[];
 }
 
-export const NewsCard = ({ articles }: IProps) => {
+export const NewsCard = ({ news }: IProps) => {
   return (
     <>
-      {articles.map((item) => {
+      {news.map((item) => {
         return (
           <NewsElements key={item.id}>
             <Figure>
