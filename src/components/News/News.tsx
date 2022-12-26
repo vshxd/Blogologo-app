@@ -2,7 +2,7 @@ import { NewsCard } from "components";
 import { useEffect } from "react";
 import { fetchAllNews, getAllNews, useAppDispatch, useAppSelector } from "store";
 
-import { SortButton, SortButtonActive, SortMenu, StyledNews } from "./styles";
+import { StyledNews } from "./styles";
 
 export const News = () => {
   const dispatch = useAppDispatch();
@@ -12,15 +12,8 @@ export const News = () => {
   }, [dispatch]);
   return (
     <>
-      <SortMenu>
-        <SortButtonActive>Day</SortButtonActive>
-        <SortButton>Week</SortButton>
-        <SortButton>Month</SortButton>
-        <SortButton>Year</SortButton>
-      </SortMenu>
-
       <StyledNews>
-        {isLoading ? <span>Loading...</span> : <NewsCard articles={results} />}
+        {isLoading ? <span>Loading...</span> : <NewsCard news={results} />}
         {error && <span>{error}</span>}
       </StyledNews>
     </>

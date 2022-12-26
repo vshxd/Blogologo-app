@@ -1,4 +1,5 @@
 import { Articles, News, TabsItem } from "components";
+import { SortButtons } from "components/SortButtons/SortButtons";
 import { useState } from "react";
 import { ITab } from "types";
 
@@ -16,6 +17,7 @@ export const Tabs = () => {
   return (
     <>
       <TabsItem selectedId={selectedTabId} tabs={tabs} onClick={handleTabClick} />
+      <SortButtons />
       {selectedTabId === tabs[0].id && <Articles />}
       {selectedTabId === tabs[1].id && <News />}
     </>
