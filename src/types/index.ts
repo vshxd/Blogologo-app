@@ -1,3 +1,4 @@
-import { IBlog } from "./types";
+import { IArticles } from "./types";
+import { INews } from "./types";
 import { ITab } from "./types";
-export type { IBlog, ITab };
+export type { IArticles, ITab, INews };

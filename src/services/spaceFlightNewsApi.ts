@@ -1,5 +1,6 @@
 import axios from "axios";
-import { IBlog } from "types";
+import { IArticles, INews } from "types";
+
 class NewsApi {
   private readonly BASE_URL = "https://api.spaceflightnewsapi.net/v3/";
   private readonly ENDPOINT = {
@@ -16,15 +17,15 @@ class NewsApi {
     const params = {
       _limit: options,
     };
-    const { data } = await this.API.get<IBlog[]>(this.ENDPOINT.articles, { params });
+    const { data } = await this.API.get<IArticles[]>(this.ENDPOINT.articles, { params });
 
     return data;
   }
-  public async getNews() {
+  public async getNews(options: number) {
     const params = {
-      _limit: 12,
+      _limit: options,
     };
-    const { data } = await this.API.get<IBlog[]>(this.ENDPOINT.blogs, { params });
+    const { data } = await this.API.get<INews[]>(this.ENDPOINT.blogs, { params });
 
     return data;
   }
@@ -32,7 +33,7 @@ class NewsApi {
     const params = {
       _limit: 12,
     };
-    const { data } = await this.API.get<IBlog[]>(`${this.ENDPOINT.articles}/${id}`, { params });
+    const { data } = await this.API.get<IArticles[]>(`${this.ENDPOINT.articles}/${id}`, { params });
 
     return data;
   }
@@ -40,7 +41,7 @@ class NewsApi {
     const params = {
       _limit: 12,
     };
-    const { data } = await this.API.get<IBlog[]>(`${this.ENDPOINT.blogs}/${id}`, { params });
+    const { data } = await this.API.get<INews[]>(`${this.ENDPOINT.blogs}/${id}`, { params });
 
     return data;
   }
