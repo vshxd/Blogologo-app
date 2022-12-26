@@ -1,34 +1,20 @@
-import { useEffect, useState } from "react";
-import { newsAPI } from "services";
-import { IBlog } from "types";
-import {
-  NewsElements,
-  StyledArticles,
-  Image,
-  FigureDisc,
-  Figure,
-  FigureDate,
-  FigCaption,
-} from "./styles";
+import { ArticlesCard } from "components";
+import { useEffect } from "react";
+import { fetchAllArticles, getAllArticles, useAppDispatch, useAppSelector } from "store";
+import { StyledArticles } from "./styles";
 
 export const Articles = () => {
-  const [articles, setArticles] = useState<IBlog[]>([]);
+  const dispatch = useAppDispatch();
+  const { isLoading, error, results } = useAppSelector(getAllArticles);
   useEffect(() => {
-    newsAPI.getArticles(12).then(setArticles);
-  }, []);
+    dispatch(fetchAllArticles(12));
+  }, [dispatch]);
   return (
-    <StyledArticles>
-      {articles.map((n) => (
-        <NewsElements key={n.id}>
-          <Figure>
-            <Image src={n.imageUrl} alt={n.title} />
-            <FigCaption>
-              <FigureDate>{n.publishedAt}</FigureDate>
-              <FigureDisc>{n.title}</FigureDisc>
-            </FigCaption>
-          </Figure>
-        </NewsElements>
-      ))}
-    </StyledArticles>
+    <>
+      <StyledArticles>
+        {isLoading ? <span>Loading...</span> : <ArticlesCard articles={results} />}
+        {error && <span>{error}</span>}
+      </StyledArticles>
+    </>
   );
 };
