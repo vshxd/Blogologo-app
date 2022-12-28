@@ -21,3 +21,9 @@ export const SortButtonActive = styled(SortButton)`
   background: ${Color.Secondary_Light};
   color: ${Color.White};
 `;
+
+export const SortBlock = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 400px;
+`;
