@@ -10,6 +10,12 @@ import { Toggle } from "./Toggle/Toggle";
 import { NewsCard } from "./NewsCard/NewsCard";
 import { Tabs } from "./Tabs/Tabs";
 import { TabsItem } from "./TabsItem/TabsItem";
+import { SortButtonByDate } from "./SortButtonByDate/SortButtonByDate";
+import { SortButton } from "./SortButton/SortButton";
+import { CustomSelect } from "./CustomSelect/CustomSelect";
+import { MainTemplate } from "./MainTemplate/MainTemplate";
+import { Spinner } from "./Spinner/Spinner";
+import { ArticlesDetails } from "./ArticlesDetails/ArticlesDetails";
 
 export {
   Header,
@@ -24,4 +30,10 @@ export {
   NewsCard,
   Tabs,
   TabsItem,
+  SortButtonByDate,
+  SortButton,
+  CustomSelect,
+  MainTemplate,
+  Spinner,
+  ArticlesDetails,
 };

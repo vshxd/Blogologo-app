@@ -1,14 +1,6 @@
-import { Blog, Footer, Header } from "components";
-import { Container, Wrapper } from "styles";
+import { RouterProvider } from "react-router-dom";
+import { router } from "router";
 
 export const App = () => {
-  return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Blog />
-        <Footer />
-      </Container>
-    </Wrapper>
-  );
+  return <RouterProvider router={router} />;
 };
