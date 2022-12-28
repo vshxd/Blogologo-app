@@ -1,4 +1,4 @@
-import { ArticlesCard } from "components";
+import { ArticlesCard, Spinner } from "components";
 import { useEffect } from "react";
 import { fetchAllArticles, getAllArticles, useAppDispatch, useAppSelector } from "store";
 import { StyledArticles } from "./styles";
@@ -12,7 +12,7 @@ export const Articles = () => {
   return (
     <>
       <StyledArticles>
-        {isLoading ? <span>Loading...</span> : <ArticlesCard articles={results} />}
+        {isLoading ? <Spinner /> : <ArticlesCard articles={results} />}
         {error && <span>{error}</span>}
       </StyledArticles>
     </>
