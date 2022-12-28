@@ -19,8 +19,7 @@ export const Image = styled.img`
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 15px 15px 0 0;
   filter: brightness(0.6);
   transition: filter 0.2s ease-in-out;
   &:hover {
@@ -31,8 +30,7 @@ export const Image = styled.img`
 export const FigCaption = styled.figcaption`
   background-color: ${Color.Secondary};
   padding: 30px 20px 30px 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 0 0 15px 15px;
   height: 130px;
 `;
 
