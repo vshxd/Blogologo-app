@@ -7,6 +7,8 @@ import { getAllArticles } from "./selectors/articlesSelectors";
 import { getAllNews } from "./selectors/newsSelectors";
 import { fetchAllArticles } from "./slices/articlesSlice/articlesSlice";
 import { fetchAllNews } from "./slices/newsSlice/newsSlice";
+import { fetchArticleById } from "./slices/getArticleSlice/getArticleSlice";
+import { getArticlesById } from "./selectors/articlesByIdSelector";
 
 export {
   store,
@@ -18,4 +20,6 @@ export {
   fetchAllArticles,
   getAllNews,
   fetchAllNews,
+  fetchArticleById,
+  getArticlesById,
 };

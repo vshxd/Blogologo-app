@@ -29,11 +29,8 @@ class NewsApi {
 
     return data;
   }
-  public async getArticlesById(id: number) {
-    const params = {
-      _limit: 12,
-    };
-    const { data } = await this.API.get<IArticles[]>(`${this.ENDPOINT.articles}/${id}`, { params });
+  public async getArticlesById(id: string) {
+    const { data } = await this.API.get<IArticles>(`${this.ENDPOINT.articles}/${id}`);
 
     return data;
   }
